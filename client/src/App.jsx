@@ -1,12 +1,14 @@
-import { ProSidebarProvider } from "react-pro-sidebar";
-import React from "react";
-import Routes from "./Routes";
+import { useState } from "react";
+
+import "./App.css";
+
+import { Login } from "./pages/Login";
 
 function App() {
   return (
-    <ProSidebarProvider>
-      <Routes />
-    </ProSidebarProvider>
+    <>
+      <Login></Login>
+    </>
   );
 }
 
