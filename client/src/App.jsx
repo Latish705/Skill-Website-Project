@@ -1,11 +1,12 @@
-import "./App.css";
-import Login from "./components/Login";
+import { ProSidebarProvider } from "react-pro-sidebar";
+import React from "react";
+import Routes from "./Routes";
 
 function App() {
   return (
-    <>
-      <Login></Login>
-    </>
+    <ProSidebarProvider>
+      <Routes />
+    </ProSidebarProvider>
   );
 }
 
