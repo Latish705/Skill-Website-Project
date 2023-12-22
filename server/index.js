@@ -1,5 +1,10 @@
 import app from "./app.js";
+import connectDB from "./db/dbConfig.js";
 
-app.listen(process.env.PORT, () => {
-  console.log(`Server is listening on port ${process.env.PORT}`);
-});
+connectDB()
+  .then(() => {
+    app.listen(process.env.PORT, () => {
+      console.log(`Server running at http://localhost:${process.env.PORT}`);
+    });
+  })
+  .catch((error) => console.log(error.message));
